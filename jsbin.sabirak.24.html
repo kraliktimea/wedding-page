@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2017 by kraliktimea (http://jsbin.com/sabirak/24/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html lang="en">
+<head>
+<meta name="description" content="wedding page">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zoe & Alex</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Great+Vibes%7CLibre+Baskerville%7CMuli" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-favicon.png">
+<style id="jsbin-css">
+* {
+  box-sizing: border-box;
+  font-family: 'Muli', sans-serif;
+}
+/*  GENERAL STYLES */
+h1,h2,h3,p,img,ul{
+  margin-bottom: 1.5rem;
+}
+section{
+  padding: 1.5rem 1rem;
+  width: 95%;
+  text-align: center;
+  margin:1.5rem auto;
+}
+body{
+  background: url(https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-background.png);
+}
+.program, .faq {
+  background-color:hsla(100,0%,0%,.6);
+  color:#d2ba87;
+}
+h1,h2{
+  font-family: 'Great Vibes', cursive;
+  text-align:center;
+  font-size:3rem;
+}
+.tagline, .date, h3, .contact{
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+a {
+  text-decoration: none;
+  color: #bd806e;
+}
+a:hover {
+  color: #eda087; 
+  transition: color .15s ease-in-out;
+}
+.contact{
+  color:#444349;
+}
+/* HEADER STYLES */
+.cover{
+  background: url("https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg") no-repeat 70% center/cover;
+  height: 100vh;
+  width: 100vw;
+  color: #ffffff;
+  text-align: center;
+  display: table;
+}
+.hero-text-wrapper {
+  display: table-cell;
+  vertical-align: middle;
+}
+.tagline {
+  font-size: 1.25rem;
+  letter-spacing: .15rem;
+}
+.tagline::after {
+  display: block;
+  content: "";
+  background-color: #fff;
+  height: 1px;
+  width: 12.515625rem;
+  margin: .5rem auto;
+}
+.date {
+  font-size: 1.25rem;
+  letter-spacing: .15rem;
+  vertical-align: middle;
+}
+.date::before, .date::after{
+  display: inline-block;
+  content:"";
+  background-color: #fff;
+  height: 1px;
+  width: 1.5rem;
+  vertical-align: middle;
+  margin: 0 .5rem;
+}
+.hero-text{
+  background: hsla(100,0%,0%,.5);
+  padding: 1rem;
+  color: hsla(0,0%,100%,.9);
+}
+.hero-text h1{
+  color:#d2ba87;
+  font-size: 3.15rem;
+}
+@media (min-width:768px) {
+  .tagline {
+    text-transform: uppercase;
+  }
+  .hero-text h1{
+    font-size:7rem;
+    font-weight:normal;
+  }
+  .hero-text{
+    width:50vw;
+    padding: 1.25rem;
+    border-radius: 4px;
+    margin:0 auto;
+  }
+  .cover{
+  background: url("https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-cover.jpg") no-repeat center/cover;
+  }
+}
+/* LOCATIONS STYLES */
+.locations{
+  color: #444349;
+  margin-top: 1.75rem;
+}
+.locations h2{
+  font-weight:bold;
+}
+.blurb img{
+  height:7.5rem;
+}
+.blurb h3, div{
+  font-weight: 700;
+}
+.blurb div{
+  line-height: 1.8;
+  letter-spacing: .05rem;
+  font-size: 1.1rem;
+}
+.blurb::after {
+  content: "";
+  display: block;
+  height: .1875rem;
+  width: 25vw;
+  margin: 1.5rem auto;
+  background-color: #444349;
+}
+@media (min-width:768px) {
+  .blurb{
+    display:inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 1.5rem;
+    margin: .5rem;
+  }
+  .blurb::after {
+    display: none;
+  }
+}
+/* PROGRAM STYLES */
+.program{
+  text-align:left;
+  width:100%;
+  margin: 0;
+}
+.program li, p{
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+.program h2 {
+  margin-top: 1rem; 
+}
+.program p {
+  font-style: italic;
+}
+.program ul {
+  letter-spacing: .025rem;
+}
+@media (min-width:768px) {
+  .program-wrapper{
+    width: 30vw;
+    margin: 0 auto;
+  }
+}
+/* GIFTS STYLES */
+.gifts{
+  font-weight:bold;
+  color: #444349;
+  margin-top:1.5rem;
+  margin-bottom: -1.5rem;
+}
+.gifts img{
+  height:7.5rem;
+}
+.gifts p{
+  font-family:'Libre Baskerville', serif;
+}
+/* FAQ STYLES*/
+.faq{
+  width:100%;
+  margin:0;
+}
+.question-group p{
+  text-align:left;
+}
+.question-group::after{
+  display:block;
+  content:"";
+  height:.1875rem;
+  width:50vw;
+  margin: 1.5rem auto;
+  background-color:#d2ba87;
+}
+.question{
+  font-weight: bold;
+  margin-bottom: .5rem;
+}
+.answer{
+  font-weight:normal;
+  margin-top: 1.5rem;
+}
+.faq h3 {
+  margin-top: 2.175rem;
+}
+@media (min-width:768px) {
+  .question-group{
+    display:inline-block;
+    width: 30%;
+    vertical-align: top;
+    padding: 1.5rem;
+    margin: .5rem;  
+  }
+  .question-group::after {
+    display: none;
+  }
+  .question-group h3 {
+    text-align: left;
+  }
+}
+/* FOOTER STYLES */
+footer{
+  height: 10vh;
+  width: 100vw;
+  background-color: #606060;
+  color: #fff;
+  display: table;
+  text-align: center;
+}
+.footer-wrapper{
+  display: table-cell;
+  padding: .5rem 1rem;
+  vertical-align: middle;
+}
+footer p{
+  font-size:80%;
+  font-family: 'Muli', sans-serif;
+}
+@media (min-width:768px) {
+  footer{
+    min-height: 7vh;
+  }
+}
+</style>
+</head>
+<body>
+  <header class="cover">
+    <div class="hero-text-wrapper">
+      <div class="hero-text">
+        <div class="tagline">We're getting married!</div>
+        <h1>Zoe & Alex</h1>
+        <span class="date">August 1, 2018</span>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="locations">
+      <h2>Locations</h2>
+      <div class="blurb">
+        <h3>Ceremony</h3>
+        <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-ceremony.png" alt="Ceremony">
+        <div>St. Nicholas Church</div>
+        <div>2 Trinity Square, Budapest</div>
+      </div>
+      <div class="blurb">
+        <h3>Photos</h3>
+        <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-photoshoot.png" alt="Photoshoot">
+        <div>Liberty Bastion</div>
+        <div>23 Wisdom Road, Budapest</div>
+      </div>
+      <div class="blurb">
+        <h3>Party</h3>
+        <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-party.png" alt="Party">
+        <div>Heaven Lounge</div>
+        <div>14 Fairy Street, Budapest</div>
+      </div>
+    </section>
+    <section class="program">
+      <h2>Program</h2>
+      <div class="program-wrapper">
+        <p>"It's going to be somehow, that's for sure."</p>
+        <ul>
+          <li>13:45 – Wedding ceremony</li>
+          <li>14:30 – Photos</li>
+          <li>16:00 – Cocktails</li>
+          <li>18:00 – Dinner</li>
+          <li>22:00 – Cake</li>
+          <li>... - 4:00 – Dance until dawn</li>
+        </ul>
+      </div>
+    </section>
+    <section class="gifts">
+      <h2>Gifts</h2>
+      <p>The greatest gift for us is to have you there.</p>
+      <img src="https://orange.codeberryschool.com/content/images/project-assets/wedding-landing-gifts.png" alt="Gifts">
+      <p>Please, just bring yourself and have fun with us.</p>
+    </section>
+    <section class="faq">
+      <h2>Questions & Answers</h2>
+      <div class="question-group">
+        <h3>Travel and accomodations</h3>
+        <p class="question">Will there be some kind of organized transfer?</p>
+        <p class="answer">No, we'll just meet at the church at 13:15.</p>
+        <p class="question">Where can I park?</p>
+        <p class="answer">Parking is free on the weekends in the 1st district. The locations are close to each other so you won't need your car.</p>
+        <p class="question">How can I get home at night?</p>
+        <p class="answer">The 916 bus is in service all night at the castle and it hits every major traffic hub in the city.</p>
+      </div>
+      <div class="question-group">
+        <h3>Food and festivities</h3>
+        <p class="question">I'd like to do some kind of surprise for you guys at the party. To whom should I talk about this?</p>
+        <p class="answer">Discuss it with Abigail Smith. Just drop her an email at <a href="mailto:abigail@awesomemail.com">abigail@awesomemail.com</a>.</p>
+        <p class="question">What should I wear? Do you have a dress code?</p>
+        <p class="answer">Wear what's comfortable to you. If it helps <a href="#" target="_blank">smart casual</a> / <a href="#" target="_blank">business casual</a> for the ladies and <a href="#" target="_blank">smart casual</a> / <a href="#" target="_blank">informal</a> for the gentlemen are perfect options.</p>
+        <p class="question">I would like some kind of special food (gluten-free, lactose-free, vegan etc.)</p>
+        <p class="answer">Drop us a line <a href="mailto:zoeandalex@awesomemail.com">here</a> and we'll find a way.</p>
+      </div>
+      <div class="question-group">
+        <h3>Other small stuff</h3>
+        <p class="question">I have a problem / question on the wedding day. With whom can I speak?</p>
+        <p class="answer">Jared Wright on this number: <a href="tel:+36300000000">+36 30 000 0000</a>.</p>
+        <p class="question">Can we bring kids?</p>
+        <p class="answer">Sure! We planned a whole toy / sweets corner for them.</p>
+        <p class="question">How do you feel about dogs? Can I bring mine?</p>
+        <p class="answer">We love dogs and you can absolutely bring yours. The Heaven Lounge is a dog-friendly place.</p>
+      </div>
+    </section>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>If you have any questions feel free to call / write us.</p>
+      <p>Phone: <a href="tel:+36300000000">+36 30 000 0000</a> (Zoe) / <a href="tel:+36300000000">+36 30 000 0000</a> (Alex)</p>
+      <p>Email: <a href="mailto:zoeandalex@awesomemail.com">zoeandalex@awesomemail.com</a></p>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-wrapper">
+      <p>Made with ♥ in Budapest ©2018 | Icons by <a href="http://www.flaticon.com/authors/becris">Becris</a> (<a href="https://creativecommons.org/licenses/by/3.0/">CC 3.0 BY</a>)</p>
+    </div>
+  </footer>
+</body>
+</html>
